@@ -11,4 +11,10 @@ export default defineConfig({
     },
     shared: ["react", "react-dom"]
   })],
+  build: {
+    target: "esnext",
+    modulePreload: false,
+    minify: false,
+    cssCodeSplit: false
+  }
 })
