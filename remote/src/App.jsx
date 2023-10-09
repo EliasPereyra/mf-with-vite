@@ -1,9 +1,9 @@
-import { useState } from "react";
-import "./App.css";
+import useValue from "./store";
 import { Button } from "./components/Button";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useValue();
 
   return (
     <>
