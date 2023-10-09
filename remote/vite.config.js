@@ -9,11 +9,15 @@ export default defineConfig({
     name: "remote_app",
     filename: "remoteEntry.js",
     exposes: {
-      "./components/Button": "./src/components/Button"
+      "./components/Button": "./src/components/Button",
+      "./store": "./src/store"
     },
-    shared: ["react", "react-dom"]
+    shared: ["react", "react-dom", "jotai"]
   })],
   build: {
-    target: "esnext"
+    target: "esnext",
+    modulePreload: false,
+    minify: false,
+    cssCodeSplit: false
   }
 })
